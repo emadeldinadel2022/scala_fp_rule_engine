@@ -1,5 +1,7 @@
-import java.time.LocalDate
+package ordersrulesengine
+
 import java.io.{File, FileOutputStream, PrintWriter}
+import java.time.LocalDate
 import scala.io.{BufferedSource, Source}
 import scala.math.BigDecimal.RoundingMode
 
@@ -13,10 +15,8 @@ object OrderDiscountProcessing extends App{
     if (batch <= getFileLength(path))  Source.fromFile(path).getLines().toList.tail.slice(0, batch)
     else List.empty
   }
-  private def toOrder(line: String): Order = {
-    new Order(line.split(",")(0), line.split(",")(1), line.split(",")(2), line.split(",")(3).toInt,
+  private def toOrder(line: String): Order = Order(line.split(",")(0), line.split(",")(1), line.split(",")(2), line.split(",")(3).toInt,
       line.split(",")(4).toFloat, line.split(",")(5), line.split(",")(6))
-  }
 
   //private def writeOrder(order: Order): String =
   private def getDate(timestamp: String): String = timestamp.substring(0, 10)
@@ -74,8 +74,9 @@ object OrderDiscountProcessing extends App{
 
 
 
+
   def getOrderWithDiscount(order: Order, rules: List[(Function[Order, Boolean], Function[Order, Double])]): Double = {
-    (rules.filter((a) => a._1(order)).map((b) => b._2(order)).sortBy(+_).take(3).sum / 3)
+    rules.filter(a => a._1(order)).map(b => b._2(order)).sortBy(+_).take(3).sum / 3
   }
 
   def roundDiscount(discount: Double, place: Int): Double = BigDecimal(discount).setScale(4, BigDecimal.RoundingMode.HALF_UP).toDouble
