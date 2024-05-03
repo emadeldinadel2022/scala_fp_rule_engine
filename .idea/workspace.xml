@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Models/Model.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/dblayer/DBConnector.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/dblayer/Tables.scala" afterDir="false" />
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="docker postgreImage connection">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/OrderDiscountProcessing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ordersrulesengine/OrderDiscountProcessing.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Models/Model.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Models/Model.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ordersrulesengine/OrderDiscountProcessing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ordersrulesengine/RuleEngine.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +56,13 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.OrderDiscountProcessing.executor": "Run",
+    "Application.ordersrulesengine.OrderDiscountProcessing.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.ordersrulesengine.OrderDiscountProcessing">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="scala_project" />
@@ -81,8 +77,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ordersrulesengine.OrderDiscountProcessing" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ordersrulesengine.OrderDiscountProcessing" />
+      <module name="scala_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ordersrulesengine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ordersrulesengine.OrderDiscountProcessing" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.OrderDiscountProcessing" />
       </list>
@@ -100,6 +110,19 @@
       <option name="presentableId" value="Default" />
       <updated>1714459808660</updated>
     </task>
+    <task id="LOCAL-00001" summary="docker postgreImage connection">
+      <option name="closed" value="true" />
+      <created>1714687360677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714687360677</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="docker postgreImage connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker postgreImage connection" />
   </component>
 </project>

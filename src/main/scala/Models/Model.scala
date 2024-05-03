@@ -3,7 +3,6 @@ package Models
 import java.time.LocalDate
 import java.sql.Timestamp
 
-
 case class Order(id: Long, timestamp: String, productName: String, expiryDate: String,
                  quantity: Int, unitPrice: Float, channel: String, paymentMethod: String)
 
