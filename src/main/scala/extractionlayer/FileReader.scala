@@ -1,19 +1,19 @@
 package extractionlayer
 
-import java.io.{File, FileOutputStream, PrintWriter}
 import scala.io.{BufferedSource, Source}
 
-
-object FileReader {
-  val filePath = "src/main/resources/Orders.csv"
-
-  def getFileLength(path: String): Int = Source.fromFile(path).getLines().length
-
-  def readFile(path: String, batch: Int): List[String] = {
-    if (batch <= getFileLength(path)) Source.fromFile(path).getLines().toList.tail.slice(0, batch)
-    else List.empty
-  }
-
-  
+class FileReader(path: String) {
+//
+//  //def apply: BufferedSource = Source.fromFile(path)
+//
+//  private def getFileLength: Int = this.getLines().length
+//
+//  def readFile(batch: Int): List[String] = {
+//    if (batch <= getFileLength) apply.getLines().toList.tail.slice(0, batch)
+//    else List.empty
+//  }
+//
 
 }
+
+
