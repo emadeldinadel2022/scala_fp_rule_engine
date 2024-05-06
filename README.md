@@ -1,1 +1,1 @@
-# scala_fp_rule_engine
+# Rule Engine Scala Project

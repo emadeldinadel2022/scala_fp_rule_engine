@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="docker postgreImage connection">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="code organize into modules for Single Responsibility Principle">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Models/Model.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Models/OrderModels.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/QueryHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dblayer/QueryHandler.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/Tables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dblayer/SlickTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ordersrulesengine/RuleEngine.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,11 +133,38 @@
       <option name="project" value="LOCAL" />
       <updated>1714687360677</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="docker postgreImage connection">
+      <option name="closed" value="true" />
+      <created>1714929835498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714929835500</updated>
+    </task>
+    <task id="LOCAL-00003" summary="code organize into modules for Single Responsibility Principle">
+      <option name="closed" value="true" />
+      <created>1714929879523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714929879523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="docker postgreImage connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker postgreImage connection" />
+    <MESSAGE value="code organize into modules for Single Responsibility Principle" />
+    <option name="LAST_COMMIT_MESSAGE" value="code organize into modules for Single Responsibility Principle" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.UnsupportedClassVersionError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -14,7 +14,7 @@ object TimeConvertor{
   }
 
   def stringToDate(input: String): LocalDate = {
-    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'")
+    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     val localDate = LocalDate.parse(input, formatter)
     localDate
   }

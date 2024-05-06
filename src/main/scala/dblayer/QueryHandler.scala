@@ -15,9 +15,8 @@ object PrivateExecutionContext{
 object QueryHandler {
     import slick.jdbc.PostgresProfile.api._
     import PrivateExecutionContext._
-
-
-    def InsertOrder(order: OrderWithDiscount): Unit = {
+  
+    def insertOrder(order: OrderWithDiscount): Unit = {
       val query = SlickTables.orderTable += order
       val futureId: Future[Int] = DBConnector.db.run(query)
 
@@ -26,7 +25,7 @@ object QueryHandler {
         case Failure(ex) => println(s"Query failed, reason $ex")
       }
 
-      Thread.sleep(50000)
+      Thread.sleep(10000)
     }
 
   def insertBulkOrders(orders: Seq[OrderWithDiscount]): Unit = {
@@ -37,7 +36,6 @@ object QueryHandler {
       case Success(_) => println("Bulk insert successful")
       case Failure(ex) => println(s"Bulk insert failed, reason: $ex")
     }
-
     Thread.sleep(100000)
   }
 
