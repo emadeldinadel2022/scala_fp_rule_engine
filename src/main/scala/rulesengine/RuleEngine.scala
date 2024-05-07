@@ -69,24 +69,4 @@ object RuleEngine{
     rules.filter(a => a._1(order)).map(b => b._2(order)).sortBy(+_).take(limit).sum / limit
   }
 
-
-
-  /*
-  def getDiscountRules: List[Order => (Boolean, Double)] = List(
-  order => qualifyExpirationDiscount(order) -> calculateExpirationDiscount(order),
-  order => qualifyCategoryDiscount(order) -> calculateCategoryDiscount(order),
-  order => qualifySpecialDiscount(order) -> calculateSpecialDiscount(order),
-  order => qualifyQuantityDiscount(order) -> calculateQuantityDiscount(order),
-  order => qualifyPaymentMethodDiscount(order) -> calculatePaymentMethodDiscount(order)
-)
-
-def calcOrderDiscount(order: Order, limit: Int, rules: List[Order => (Boolean, Double)]): Double = {
-  rules
-    .collect { case (qualify, calculate) if qualify(order) => calculate(order) }
-    .sortBy(identity)
-    .take(limit)
-    .sum / limit
-}
-*/
-
 }

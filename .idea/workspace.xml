@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="code organize into modules for Single Responsibility Principle">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add new requirements">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/RefactorRuleEngine.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/QueryHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dblayer/QueryHandler.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/Tables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dblayer/SlickTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +63,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.OrderDiscountProcessing.executor": "Run",
+    "Application.RefactorRuleEngine.executor": "Debug",
     "Application.ordersrulesengine.OrderDiscountProcessing.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -77,7 +71,7 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.RefactorRuleEngine">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="scala_project" />
@@ -88,6 +82,19 @@
     <configuration name="OrderDiscountProcessing" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="OrderDiscountProcessing" />
       <module name="scala_project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RefactorRuleEngine" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="rulesengine.RefactorRuleEngine" />
+      <module name="scala_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rulesengine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,6 +114,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RefactorRuleEngine" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ordersrulesengine.OrderDiscountProcessing" />
         <item itemvalue="Application.OrderDiscountProcessing" />
@@ -149,13 +157,22 @@
       <option name="project" value="LOCAL" />
       <updated>1714929879523</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add new requirements">
+      <option name="closed" value="true" />
+      <created>1715007459991</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715007459991</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="docker postgreImage connection" />
     <MESSAGE value="code organize into modules for Single Responsibility Principle" />
-    <option name="LAST_COMMIT_MESSAGE" value="code organize into modules for Single Responsibility Principle" />
+    <MESSAGE value="add new requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new requirements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

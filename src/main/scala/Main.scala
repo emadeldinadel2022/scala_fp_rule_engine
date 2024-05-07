@@ -25,7 +25,7 @@ object Main {
     val ordersWithDiscounts = processedOrders.map(OrderProcessor.toOrderWithDiscount)
     ordersWithDiscounts.foreach(println)
 
-    QueryHandler.insertOrder(ordersWithDiscounts(0))
+    QueryHandler.insertBulkOrders(ordersWithDiscounts.toSeq)
 
 
   }
