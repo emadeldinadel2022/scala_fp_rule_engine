@@ -31,7 +31,7 @@ The project aims to develop a Scala-based ETL (Extract, Transform, Load) system 
 * Build a logging system for tracking the system operation and the data lineage.
 
 
-## Tech Stack
+## Tech Stack and Dependencies
 
 ```bash
 libraryDependencies ++= Seq(
@@ -75,7 +75,7 @@ scala_project-metabase-1
 
 ## Project Structure
 ```bash
-project_root
+scala_project
 │
 ├── db
 │   └── init_scripts.sql        # SQL scripts for initializing the database
@@ -126,6 +126,58 @@ project_root
 └── docker-compose.yml           # Docker Compose configuration for PostgreSQL and Metabase
 ```
 
+## Usage
+
+### Prerequisites
+Before running the project, ensure you have the following installed:
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) 11 or higher
+- [Scala Build Tool (SBT)](https://www.scala-sbt.org/download.html)
+- [Docker](https://www.docker.com/get-started) (if using Docker for PostgreSQL and Metabase)
+
+### Setup
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
+
+2. Navigate to the project root directory:
+   ```bash
+   cd project_root
+   ```
+
+3. Initialize the database by running the SQL scripts:
+   ```bash
+   psql -U <username> -d <database_name> -a -f db/init_scripts.sql
+   ```
+   Replace `<username>` and `<database_name>` with your PostgreSQL username and the name of your database.
+
+4. Start PostgreSQL and Metabase using Docker Compose:
+   ```bash
+   docker-compose up -d
+   ```
+
+### Running the Application
+1. Compile the Scala code using SBT:
+   ```bash
+   sbt compile
+   ```
+
+2. Run the application:
+   ```bash
+   sbt run
+   ```
+
+### Using the Application
+- Once the application is running, and once your triggred the monitored dir generation_data_source with the Orders.csv file in the resources directory it will perform various operations such as file reading, database querying, and processing orders.
+
+
+### Additional Notes
+- Ensure that the PostgreSQL configuration in `src/main/configuration/application.conf` matches your database setup.
+- View logs in the `logs` directory to monitor the application's activity.
+- Adjust Docker Compose configuration (`docker-compose.yml`) if necessary, especially if you want to customize the PostgreSQL or Metabase settings.
+
+# Demo
+![demo.webm](src%2Fmain%2Fresources%2Fdemo.webm)
 
 ## **Appendix**
 * https://youtu.be/6uwRajbkaqI?si=xZxCYli-mxJQrgeD
