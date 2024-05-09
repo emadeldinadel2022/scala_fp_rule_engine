@@ -1,13 +1,13 @@
 <configuration>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>src/main/resources/rule_engine.log</file> 
+        <file>src/main/logs/rule_engine.log</file> 
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- :: %msg%n</pattern>
         </encoder>
     </appender>
 
     <appender name="DATALINEAGE_FILE" class="ch.qos.logback.core.FileAppender">
-        <file>src/main/resources/data_lineage.log</file> 
+        <file>src/main/logs/data_lineage.log</file> 
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- :: %msg%n</pattern>
         </encoder>

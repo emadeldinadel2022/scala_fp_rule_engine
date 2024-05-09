@@ -4,28 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="modify RuleEngine to satisfy the pure functional approach">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data_lineage.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rule_engine.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileReader.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileWatcher.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add logger system, data lineage tracker, and watch service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/init-scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/init-scripts.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/configurations/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data_lineage.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/data_lineage.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Models/OrderModels.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/DBConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/DBConnector.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/QueryHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/QueryHandler.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/SlickTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/TimeConvertor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RefactorRuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RuleEngine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rule_engine.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/rule_engine.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +88,13 @@
       <recent name="$PROJECT_DIR$/src/main/generation_data_source" />
       <recent name="$PROJECT_DIR$/src/main/order_dir" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/logs" />
+      <recent name="$PROJECT_DIR$/src/main/configurations" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.extractionlayer.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="scala_project" />
@@ -155,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.extractionlayer.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.RefactorRuleEngine" />
-        <item itemvalue="Application.extractionlayer.Main" />
         <item itemvalue="Application.ordersrulesengine.OrderDiscountProcessing" />
         <item itemvalue="Application.OrderDiscountProcessing" />
       </list>
@@ -215,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715098658432</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add logger system, data lineage tracker, and watch service">
+      <option name="closed" value="true" />
+      <created>1715248075588</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715248075588</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -223,7 +226,8 @@
     <MESSAGE value="code organize into modules for Single Responsibility Principle" />
     <MESSAGE value="add new requirements" />
     <MESSAGE value="modify RuleEngine to satisfy the pure functional approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify RuleEngine to satisfy the pure functional approach" />
+    <MESSAGE value="add logger system, data lineage tracker, and watch service" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logger system, data lineage tracker, and watch service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

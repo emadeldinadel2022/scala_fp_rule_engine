@@ -1,7 +1,7 @@
 package businesslogic
 
 import businessmodels.{Order, OrderIdGenerator, OrderWithDiscount, ProcessedOrder}
-import businesslogic.RefactorRuleEngine.{calculateOrderDiscount, getDiscountRules}
+import businesslogic.RefactorRuleEngine.{calculateOrderDiscount, getDiscountRules, calculateFinalPrice}
 import com.typesafe.scalalogging.Logger
 
 
@@ -20,9 +20,10 @@ object OrderProcessor {
 
   def processOrderDiscounts(order: Order, limit: Int): ProcessedOrder = {
     val discount = calculateOrderDiscount(order, limit, getDiscountRules)
+    val finalPrice = calculateFinalPrice(order, discount)
     logger.info("add discount to order object and convert to processedObject")
     ProcessedOrder(order.id, OrderIdGenerator.nextId(), order.timestamp, order.productName, order.expiryDate, order.quantity,
-      order.unitPrice, order.channel, order.paymentMethod, discount)
+      order.unitPrice, order.channel, order.paymentMethod, discount, finalPrice)
   }
 
 }

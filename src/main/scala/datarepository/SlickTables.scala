@@ -5,7 +5,6 @@ import businessmodels.{OrderWithDiscount, ProcessedOrder}
 import java.time.LocalDate
 import java.sql.Timestamp
 
-
 object SlickTables {
   
   class OrderTable(tag: Tag) extends Table[OrderWithDiscount](tag, Some("destination"), "Order") {
@@ -18,20 +17,21 @@ object SlickTables {
     def channel = column[String]("channel")
     def paymentMethod = column[String]("payment_method")
     def discount = column[Double]("discount")
+    def finalPrice = column[Double]("final_price")
 
-    private def toOrder: ((Long, Timestamp, String, LocalDate, Int, Float, String, String, Double)) => OrderWithDiscount = {
-      case (id, transactionDate, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount) =>
-        OrderWithDiscount(id, transactionDate, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount)
+    private def toOrder: ((Long, Timestamp, String, LocalDate, Int, Float, String, String, Double, Double)) => OrderWithDiscount = {
+      case (id, transactionDate, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount, finalPrice) =>
+        OrderWithDiscount(id, transactionDate, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount, finalPrice)
     }
     //mapping function to the case class
-    override def * = (id, transactionTimestamp, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount) <> (toOrder, OrderWithDiscount.unapply)
+    override def * = (id, transactionTimestamp, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount, finalPrice) <> (toOrder, OrderWithDiscount.unapply)
   }
 
 
   def toOrderTable(processedOrder: ProcessedOrder): OrderWithDiscount = {
     OrderWithDiscount(processedOrder.id, TimeConvertor.stringToTimestamp(processedOrder.timestamp),
       processedOrder.productName, TimeConvertor.stringToDate(processedOrder.expiryDate), processedOrder.quantity,
-      processedOrder.unitPrice, processedOrder.channel, processedOrder.paymentMethod, processedOrder.discount)
+      processedOrder.unitPrice, processedOrder.channel, processedOrder.paymentMethod, processedOrder.discount, processedOrder.finalPrice)
   }
   
   //API entry point, fetch and add records to the db

@@ -1,0 +1,172 @@
+13:29:28.974 [main] INFO  filecommunication.FileReader -- :: File start buffering
+13:29:29.067 [main] INFO  filecommunication.FileReader -- :: file buffered successfully and closed
+13:29:29.076 [main] INFO  filecommunication.FileReader -- :: File successfully read
+13:29:29.197 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.201 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.201 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.202 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.202 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.202 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.202 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.202 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.202 [main] INFO  businesslogic.OrderProcessor$ -- :: Parse line and convert into order object
+13:29:29.218 [main] INFO  filecommunication.FileStorageWriter -- :: File successfully written
+13:29:29.218 [main] INFO  filecommunication.FileStorageWriter -- :: File write operation completed successfully
+13:29:29.270 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 1
+13:29:29.282 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-06-10).get.toString
+13:29:29.289 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-04-18
+13:29:29.291 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-04-18).get.toString
+13:29:29.291 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 1, Result: true
+13:29:29.294 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -53from 2023-06-10, 2023-04-18
+13:29:29.314 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: wine
+13:29:29.315 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount executed successfully on Order: 1, Result: True
+13:29:29.316 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: wine
+13:29:29.316 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateCategoryDiscount executed successfully on Order: 1, Result: wine --> 5%
+13:29:29.321 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 04-18
+13:29:29.322 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 1, Result: (False) waiting.... for event
+13:29:29.322 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 1, Result: True
+13:29:29.322 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 1, Result: 5%
+13:29:29.323 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 1, Result: Visa --> 15%
+13:29:29.323 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 1, Result: Store
+13:29:29.351 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 1
+13:29:29.351 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.353 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 2
+13:29:29.354 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-22).get.toString
+13:29:29.355 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-04-09
+13:29:29.355 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-04-09).get.toString
+13:29:29.356 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 2, Result: true
+13:29:29.356 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -43from 2023-05-22, 2023-04-09
+13:29:29.357 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: pepper
+13:29:29.357 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 2, Result: False
+13:29:29.357 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 04-09
+13:29:29.358 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 2, Result: (False) waiting.... for event
+13:29:29.358 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 2, Result: True
+13:29:29.358 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 2, Result: Cash --> 15%
+13:29:29.358 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 2, Result: Store
+13:29:29.359 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 2
+13:29:29.359 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.359 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 3
+13:29:29.360 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-08-04).get.toString
+13:29:29.361 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-05-09
+13:29:29.361 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-09).get.toString
+13:29:29.362 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 3, Result: true
+13:29:29.362 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -87from 2023-08-04, 2023-05-09
+13:29:29.362 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: wine
+13:29:29.362 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount executed successfully on Order: 3, Result: True
+13:29:29.363 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: wine
+13:29:29.363 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateCategoryDiscount executed successfully on Order: 3, Result: wine --> 5%
+13:29:29.364 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 05-09
+13:29:29.364 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 3, Result: (False) waiting.... for event
+13:29:29.364 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 3, Result: True
+13:29:29.365 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 3, Result: 5%
+13:29:29.365 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 3, Result: Cash --> 15%
+13:29:29.365 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 3, Result: Store
+13:29:29.366 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 3
+13:29:29.366 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.367 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 4
+13:29:29.368 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-23).get.toString
+13:29:29.368 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-04-09
+13:29:29.369 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-04-09).get.toString
+13:29:29.369 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 4, Result: true
+13:29:29.369 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -44from 2023-05-23, 2023-04-09
+13:29:29.370 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: external supplier
+13:29:29.370 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 4, Result: False
+13:29:29.370 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 04-09
+13:29:29.370 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 4, Result: (False) waiting.... for event
+13:29:29.371 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 4, Result: True
+13:29:29.371 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 4, Result: 7%
+13:29:29.371 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 4, Result: Visa --> 15%
+13:29:29.371 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 4, Result: App
+13:29:29.372 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 4
+13:29:29.373 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.373 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 5
+13:29:29.374 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-28).get.toString
+13:29:29.374 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-03-27
+13:29:29.375 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-03-27).get.toString
+13:29:29.375 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 5, Result: true
+13:29:29.375 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -62from 2023-05-28, 2023-03-27
+13:29:29.376 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: beans
+13:29:29.376 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 5, Result: False
+13:29:29.377 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 03-27
+13:29:29.377 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 5, Result: (False) waiting.... for event
+13:29:29.377 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 5, Result: True
+13:29:29.378 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 5, Result: 7%
+13:29:29.378 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 5, Result: Cash --> 15%
+13:29:29.378 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 5, Result: Store
+13:29:29.378 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 5
+13:29:29.379 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.379 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 6
+13:29:29.380 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-07-18).get.toString
+13:29:29.380 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-04-27
+13:29:29.381 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-04-27).get.toString
+13:29:29.381 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 6, Result: true
+13:29:29.381 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -82from 2023-07-18, 2023-04-27
+13:29:29.382 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: beef
+13:29:29.382 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 6, Result: False
+13:29:29.382 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 04-27
+13:29:29.383 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 6, Result: (False) waiting.... for event
+13:29:29.383 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 6, Result: True
+13:29:29.383 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 6, Result: 5%
+13:29:29.383 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 6, Result: Visa --> 15%
+13:29:29.383 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 6, Result: Store
+13:29:29.384 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 6
+13:29:29.384 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.385 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 7
+13:29:29.385 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-28).get.toString
+13:29:29.386 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-05-02
+13:29:29.386 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-02).get.toString
+13:29:29.387 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 7, Result: true
+13:29:29.387 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -26from 2023-05-28, 2023-05-02
+13:29:29.387 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-28).get.toString
+13:29:29.388 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-05-02
+13:29:29.388 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-02).get.toString
+13:29:29.389 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -26from 2023-05-28, 2023-05-02
+13:29:29.389 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateExpirationDiscount executed successfully on Order: 7, Result: True
+13:29:29.389 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: bread
+13:29:29.389 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 7, Result: False
+13:29:29.390 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 05-02
+13:29:29.390 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 7, Result: (False) waiting.... for event
+13:29:29.390 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 7, Result: True
+13:29:29.391 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 7, Result: Visa --> 15%
+13:29:29.391 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 7, Result: Store
+13:29:29.391 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 7
+13:29:29.391 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.392 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 8
+13:29:29.392 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-05-05).get.toString
+13:29:29.393 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-03-17
+13:29:29.393 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-03-17).get.toString
+13:29:29.394 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 8, Result: true
+13:29:29.394 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -49from 2023-05-05, 2023-03-17
+13:29:29.394 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: zucchini
+13:29:29.395 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 8, Result: False
+13:29:29.395 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 03-17
+13:29:29.396 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 8, Result: (False) waiting.... for event
+13:29:29.396 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 8, Result: True
+13:29:29.396 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 8, Result: 10%
+13:29:29.396 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 8, Result: Visa --> 15%
+13:29:29.397 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 8, Result: Store
+13:29:29.397 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 8
+13:29:29.397 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.398 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateOrderDiscount calculate final discount for Order: 9
+13:29:29.399 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-04-08).get.toString
+13:29:29.400 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-03-22
+13:29:29.400 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-03-22).get.toString
+13:29:29.401 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyExpirationDiscount executed successfully on Order: 9, Result: true
+13:29:29.401 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -17from 2023-04-08, 2023-03-22
+13:29:29.401 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-04-08).get.toString
+13:29:29.402 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractDate executed successfully, Result: 2023-03-22
+13:29:29.402 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: tolocalDate executed successfully, Result: Some(2023-03-22).get.toString
+13:29:29.402 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: subtractDate executed successfully, Result: -17from 2023-04-08, 2023-03-22
+13:29:29.402 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateExpirationDiscount executed successfully on Order: 9, Result: True
+13:29:29.403 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: extractProductCategory executed successfully, Result: eggs
+13:29:29.403 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyCategoryDiscount check failed on Order: 9, Result: False
+13:29:29.404 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: extractMMDD executed successfully, Operation Name: extractMMDD, Description: extract the month and day from timestamp or date, Return Operation: MMDD: 03-22
+13:29:29.404 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifySpecialDiscount check failed on Order: 9, Result: (False) waiting.... for event
+13:29:29.404 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyQuantityDiscount executed successfully on Order: 9, Result: True
+13:29:29.405 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateQuantityDiscount rule qualified on Order: 9, Result: 10%
+13:29:29.405 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyPaymentMethodDiscount rule qualified on Order: 9, Result: Visa --> 15%
+13:29:29.405 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: qualifyAppUserDiscount rule qualified on Order: 9, Result: App
+13:29:29.406 [main] INFO  businesslogic.RefactorRuleEngine$ -- :: Operation: calculateFinalPrice calculate final price for Order: 9
+13:29:29.406 [main] INFO  businesslogic.OrderProcessor$ -- :: add discount to order object and convert to processedObject
+13:29:29.409 [main] INFO  filecommunication.FileStorageWriter -- :: File successfully written
+13:29:29.409 [main] INFO  filecommunication.FileStorageWriter -- :: File write operation completed successfully

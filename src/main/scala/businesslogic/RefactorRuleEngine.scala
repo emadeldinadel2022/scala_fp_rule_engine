@@ -171,9 +171,9 @@ object RefactorRuleEngine {
   private def calculateAppUserDiscount(order: Order): Double = (Math.ceil(order.quantity / 5.0) * 5) / 100
 
 
-  def calculateFinalPrice(processedOrder: ProcessedOrder): Double =
-    logger.info("Operation: calculateFinalPrice"+ s" calculate final price for Order: ${processedOrder.id}")
-    processedOrder.unitPrice - (processedOrder.discount * processedOrder.unitPrice)
+  def calculateFinalPrice(order: Order, discount: Double): Double =
+    logger.info("Operation: calculateFinalPrice"+ s" calculate final price for Order: ${order.id}")
+    order.unitPrice - (discount * order.unitPrice)
 
   def roundDiscount(discount: Double, place: Int): Double = BigDecimal(discount).setScale(place, BigDecimal.RoundingMode.HALF_UP).toDouble
   
