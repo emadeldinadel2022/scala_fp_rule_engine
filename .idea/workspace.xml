@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add file writer, organize dirs">
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="update readme.md">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715250979581</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update readme.md">
+      <option name="closed" value="true" />
+      <created>1715258772653</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715258772653</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -226,7 +234,8 @@
     <MESSAGE value="modify RuleEngine to satisfy the pure functional approach" />
     <MESSAGE value="add logger system, data lineage tracker, and watch service" />
     <MESSAGE value="add file writer, organize dirs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file writer, organize dirs" />
+    <MESSAGE value="update readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
