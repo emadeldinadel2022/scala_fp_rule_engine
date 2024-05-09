@@ -1,9 +1,9 @@
 # Rule Engine Scala Project
-## Overview:
+## Overview
 
 The project aims to develop a Scala-based ETL (Extract, Transform, Load) system equipped with a rule engine. The system will monitor a designated directory for incoming data files, treating this directory as the primary source layer for data generation. Upon detecting a new file, the system will immediately initiate processing through a watcher service. The objective is to ingest the data, apply qualification checks to ensure the validity of each transaction, and subsequently calculate discounts based on predetermined conditions. The qualifiers are intricately linked to specific discount calculators, with each qualifier corresponding to only one calculator.
 
-## Features and Functionalities:
+## Features and Functionalities
 
 * **Data Ingestion**: 
   * The system will efficiently read and process data from incoming files within the monitored directory.
@@ -18,10 +18,10 @@ The project aims to develop a Scala-based ETL (Extract, Transform, Load) system 
 * **Data Lineage Logging**: 
   * To monitor the data lifecycle within the system, a dedicated data lineage logger records any operation within the rule engine model that influences data, facilitating effective monitoring and automation.
 
-## **Architecture Diagram** :
+## **Architecture Diagram** 
 ![arch.jpg](src%2Fmain%2Fresources%2Farch.jpg)
 
-## **Implementation Approach**:
+## **Implementation Approach**
 
 * Utilize Scala for its robustness and conciseness in handling complex data processing tasks.
 * Implement a modular system architecture to ensure scalability and maintainability.
@@ -73,9 +73,61 @@ scala_project-metabase-1
 **Slick-pg:** Slick-pg extends Slick with support for PostgreSQL-specific data types and features, enabling seamless integration with PostgreSQL databases.
 
 
+## Project Structure
+```bash
+project_root
+│
+├── db
+│   └── init_scripts.sql        # SQL scripts for initializing the database
+│
+├── src
+│   └── main
+│       ├── configuration
+│       │   └── application.conf  # PostgreSQL configuration
+│       │
+│       ├── generation_data_source
+│       │   └── ...               # Directory acting as the source system for appended files
+│       │
+│       ├── localstorage
+│       │   ├── landing_zone     # Directory for landing zone storage
+│       │   └── save_zone        # Directory for save zone storage
+│       │
+│       ├── logs
+│       │   ├── rule_engine.log   # Log file for rule engine
+│       │   └── data_lineage.log  # Log file for data lineage
+│       │
+│       ├── resources
+│       │   └── logback.xml       # Logback configuration
+│       │
+│       ├── scala
+│       │   ├── filecommunication
+│       │   │   ├── FileReader.scala        # Module for reading files
+│       │   │   ├── FileStorageWriter.scala # Module for writing files
+│       │   │   └── FileWatcher.scala    # Watcher service for file ingestion
+│       │   │
+│       │   ├── businesslogic
+│       │   │   ├── RuleEngine.scala # Module for qualification logic
+│       │   │   ├── RefacoredRuleEngine.scala # Module for discount calculation
+│       │   │   └── OrderProcessor.scala     # Module for handling communication between components
+│       │   │
+│       │   ├── businessmodels
+│       │   │   ├── order.scala          # Model representing orders
+│       │   │   ├── processedorder.scala # Model representing processed orders
+│       │   │   └── orderwithdiscount.scala # Model representing orders with discounts
+│       │   │
+│       │   └── datarepository
+│       │       ├── dbconnection.scala # Module for connecting to the database
+│       │       └── QueryHandler.scala     # Module for performing database queries using Slick
+│       │       └── SlickTables.scala     # Module for represent the data models for db
+|                └── TimeConvertor.scala     # Module for performing time/date converisons operations
+│       └── ...
+│
+├── build.sbt                    # SBT file for managing project dependencies
+└── docker-compose.yml           # Docker Compose configuration for PostgreSQL and Metabase
+```
 
 
-## **Appendix**:
+## **Appendix**
 * https://youtu.be/6uwRajbkaqI?si=xZxCYli-mxJQrgeD
 * https://www.baeldung.com/scala/file-io
 * https://www.baeldung.com/scala/scala-logging
