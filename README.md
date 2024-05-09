@@ -177,7 +177,7 @@ Before running the project, ensure you have the following installed:
 - Adjust Docker Compose configuration (`docker-compose.yml`) if necessary, especially if you want to customize the PostgreSQL or Metabase settings.
 
 # Demo
-![demo.webm](src%2Fmain%2Fresources%2Fdemo.webm)
+[demo.webm](src%2Fmain%2Fresources%2Fdemo.webm)
 
 ## **Appendix**
 * https://youtu.be/6uwRajbkaqI?si=xZxCYli-mxJQrgeD
