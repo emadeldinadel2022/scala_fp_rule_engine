@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add project structure to readme.md">
-      <change afterPath="$PROJECT_DIR$/src/main/generation_data_source/Orders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/configurations/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/localstorage/loading_zone/orders_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/localstorage/save_zone/orders_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logs/data_lineage.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/data_lineage.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logs/rule_engine.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/rule_engine.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/DBConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/DBConnector.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/QueryHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/QueryHandler.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/TimeConvertor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/TimeDateConvertor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileReader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileWatcher.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileWatcher.scala" afterDir="false" />
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="save_zone, loading_zone files">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/generation_data_source/Orders.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +249,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715263380213</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="detailed documentation and comments">
+      <option name="closed" value="true" />
+      <created>1715284729453</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715284729453</updated>
+    </task>
+    <task id="LOCAL-00013" summary="save_zone, loading_zone files">
+      <option name="closed" value="true" />
+      <created>1715284815372</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715284815372</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -279,7 +279,9 @@
     <MESSAGE value="update readme.md 2" />
     <MESSAGE value="add tech stack to readme.md" />
     <MESSAGE value="add project structure to readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add project structure to readme.md" />
+    <MESSAGE value="detailed documentation and comments" />
+    <MESSAGE value="save_zone, loading_zone files" />
+    <option name="LAST_COMMIT_MESSAGE" value="save_zone, loading_zone files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
