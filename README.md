@@ -177,7 +177,8 @@ Before running the project, ensure you have the following installed:
 - Adjust Docker Compose configuration (`docker-compose.yml`) if necessary, especially if you want to customize the PostgreSQL or Metabase settings.
 
 # Demo
-[demo.webm](src%2Fmain%2Fresources%2Fdemo.webm)
+[demo.webm](https://github.com/emadeldinadel2022/scala_fp_rule_engine/assets/62083769/e03d2a66-596e-4772-8f2b-51942f19cf67)
+
 
 ## **Appendix**
 * https://youtu.be/6uwRajbkaqI?si=xZxCYli-mxJQrgeD
