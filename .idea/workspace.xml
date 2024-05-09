@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add new requirements">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/RefactorRuleEngine.scala" afterDir="false" />
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="modify RuleEngine to satisfy the pure functional approach">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data_lineage.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/rule_engine.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileReader.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileWatcher.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Models/OrderModels.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/DBConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/DBConnector.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/QueryHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/QueryHandler.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/SlickTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dblayer/TimeConvertor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/TimeConvertor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/extractionlayer/FileReader.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/OrderProcessor.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RefactorRuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/rulesengine/RuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RuleEngine.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,15 +80,26 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.OrderDiscountProcessing.executor": "Run",
-    "Application.RefactorRuleEngine.executor": "Debug",
+    "Application.RefactorRuleEngine.executor": "Run",
+    "Application.extractionlayer.Main.executor": "Run",
     "Application.ordersrulesengine.OrderDiscountProcessing.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/emadadel/IdeaProjects/scala_project/src/main/generation_data_source",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.RefactorRuleEngine">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/generation_data_source" />
+      <recent name="$PROJECT_DIR$/src/main/order_dir" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="scala_project" />
@@ -87,11 +115,24 @@
       </method>
     </configuration>
     <configuration name="RefactorRuleEngine" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="rulesengine.RefactorRuleEngine" />
+      <option name="MAIN_CLASS_NAME" value="businesslogic.RefactorRuleEngine" />
       <module name="scala_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rulesengine.*" />
+          <option name="PATTERN" value="businesslogic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="extractionlayer.Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="filecommunication.Main" />
+      <module name="scala_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="filecommunication.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,7 +145,7 @@
       <module name="scala_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rulesengine.*" />
+          <option name="PATTERN" value="businesslogic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,8 +155,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RefactorRuleEngine" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.RefactorRuleEngine" />
+        <item itemvalue="Application.extractionlayer.Main" />
         <item itemvalue="Application.ordersrulesengine.OrderDiscountProcessing" />
         <item itemvalue="Application.OrderDiscountProcessing" />
       </list>
@@ -165,14 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715007459991</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modify RuleEngine to satisfy the pure functional approach">
+      <option name="closed" value="true" />
+      <created>1715098658432</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715098658432</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="docker postgreImage connection" />
     <MESSAGE value="code organize into modules for Single Responsibility Principle" />
     <MESSAGE value="add new requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new requirements" />
+    <MESSAGE value="modify RuleEngine to satisfy the pure functional approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify RuleEngine to satisfy the pure functional approach" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

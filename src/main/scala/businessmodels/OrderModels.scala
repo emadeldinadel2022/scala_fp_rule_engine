@@ -1,4 +1,4 @@
-package Models
+package businessmodels
 
 import java.time.LocalDate
 import java.sql.Timestamp
@@ -13,6 +13,9 @@ case class ProcessedOrder(id: Long, seqNum: Long, timestamp: String, productName
 case class OrderWithDiscount(id: Long, transactionTimestamp: Timestamp, productName: String, expiryDate: LocalDate,
                              quantity: Int, unitPrice: Float, channel: String, paymentMethod: String, discount: Double)
 
+case class DataLineage(operationName: String, description: String, returnOperation: String) {
+  override def toString: String = s"Operation Name: $operationName, Description: $description, Return Operation: $returnOperation"
+}
 object OrderIdGenerator {
   private val counter = new AtomicLong(0)
 

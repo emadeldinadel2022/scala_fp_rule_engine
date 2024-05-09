@@ -1,11 +1,15 @@
-package rulesengine
+package businesslogic
 
-import Models.Order
+import businessmodels.Order
+
 import java.time.LocalDate
 import scala.math.BigDecimal.RoundingMode
+import org.slf4j.LoggerFactory
+
 
 object RuleEngine{
 
+  private val logger = LoggerFactory.getLogger(getClass)
   private def getDate(timestamp: String): String = timestamp.substring(0, 10)
 
   private def getProductCategory(product_name: String): String = product_name match {
@@ -22,8 +26,12 @@ object RuleEngine{
   private def calculateExpirationDiscount(order: Order): Double = (30 - subtractDate(order.expiryDate, getDate(order.timestamp))).toDouble / 100
 
   private def qualifyCategoryDiscount(order: Order): Boolean = getProductCategory(order.productName) match {
-    case "wine" | "cheese" => true
-    case _ => false
+    case "wine" | "cheese" =>
+      logger.info(s"Order ${order.id} qualifies for category discount")
+      true
+    case _ =>
+      logger.info(s"Order ${order.id} does not qualify for category discount")
+      false
   }
 
   private def calculateCategoryDiscount(order: Order): Double = getProductCategory(order.productName) match {
@@ -43,7 +51,7 @@ object RuleEngine{
 
   private def qualifyPaymentMethodDiscount(order :Order): Boolean = order.paymentMethod.toLowerCase == "visa"
 
-  private def calculatePaymentMethodDiscount(order: Order): Double = 0.15
+  private def calculatePaymentMethodDiscount(order: Order): Double = 0.05
 
   private def qualifyAppUserDiscount(order: Order): Boolean = order.channel.toLowerCase == "app"
 
@@ -65,7 +73,7 @@ object RuleEngine{
     qualifierList.zip(calculatorList)
   }
 
-  def calcOrderDiscount(order: Order, limit: Int, rules: List[(Function[Order, Boolean], Function[Order, Double])]): Double = {
+  def calculateOrderDiscount(order: Order, limit: Int, rules: List[(Function[Order, Boolean], Function[Order, Double])]): Double = {
     rules.filter(a => a._1(order)).map(b => b._2(order)).sortBy(+_).take(limit).sum / limit
   }
 

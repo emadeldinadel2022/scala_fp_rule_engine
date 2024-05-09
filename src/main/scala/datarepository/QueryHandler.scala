@@ -1,7 +1,6 @@
-package dblayer
+package datarepository
 
-import Models.OrderWithDiscount
-
+import businessmodels.OrderWithDiscount
 import java.util.concurrent.Executors
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}

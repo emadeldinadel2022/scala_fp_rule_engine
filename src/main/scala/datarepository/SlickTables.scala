@@ -1,7 +1,7 @@
-package dblayer
+package datarepository
 
 import slick.jdbc.PostgresProfile.api.*
-import Models.OrderWithDiscount
+import businessmodels.{OrderWithDiscount, ProcessedOrder}
 import java.time.LocalDate
 import java.sql.Timestamp
 
@@ -27,6 +27,12 @@ object SlickTables {
     override def * = (id, transactionTimestamp, productName, expiryDate, quantity, unitPrice, channel, paymentMethod, discount) <> (toOrder, OrderWithDiscount.unapply)
   }
 
+
+  def toOrderTable(processedOrder: ProcessedOrder): OrderWithDiscount = {
+    OrderWithDiscount(processedOrder.id, TimeConvertor.stringToTimestamp(processedOrder.timestamp),
+      processedOrder.productName, TimeConvertor.stringToDate(processedOrder.expiryDate), processedOrder.quantity,
+      processedOrder.unitPrice, processedOrder.channel, processedOrder.paymentMethod, processedOrder.discount)
+  }
   
   //API entry point, fetch and add records to the db
   lazy val orderTable = TableQuery[OrderTable]
