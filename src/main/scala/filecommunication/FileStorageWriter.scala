@@ -1,16 +1,25 @@
 package filecommunication
 
-import businesslogic.OrderProcessor
-
 import java.io.{BufferedWriter, FileWriter}
 import com.typesafe.scalalogging.Logger
-
 import scala.util.{Failure, Success, Try}
+
+/**
+ * Represent a FileStorageWriter implement the file writer to the staging areas.
+ *
+ * @param String path for file to write on it.
+ * */
 
 class FileStorageWriter(path: String) {
 
   val logger: Logger = Logger(getClass.getName)
 
+  /**
+   * Writes the specified lines to the file represented by this FileStorageWriter instance.
+   *
+   * @param lines The lines to write to the file.
+   * @return Unit => because it write to file
+   */
   def writeFile(lines: List[String]): Unit = {
     Try {
       val bufferedWriter = new BufferedWriter(new FileWriter(path))
@@ -29,19 +38,8 @@ class FileStorageWriter(path: String) {
   }
 }
 
+//companion object with apply function
 object FileWriter {
   def apply(path: String): FileWriter = new FileWriter(path)
 }
 
-object Main{
-  def main(args: Array[String]): Unit = {
-    val reader = FileReader("src/main/resources/Orders.csv")
-    val lines = reader.readFile(10)
-    val orders = lines.map(OrderProcessor.toOrder(_, ','))
-    val fileStorageWriterLZ = FileStorageWriter("src/main/localstorage/loading_zone/orders_1.csv")
-    fileStorageWriterLZ.writeFile(orders.map(_.toString))
-    val processedOrder  = orders.map(OrderProcessor.processOrderDiscounts(_, 2))
-    val fileStorageWriterSZ = FileStorageWriter("src/main/localstorage/save_zone/orders_1.csv")
-    fileStorageWriterSZ.writeFile(processedOrder.map(_.toString))
-  }
-}

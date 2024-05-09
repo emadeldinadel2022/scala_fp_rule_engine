@@ -8,6 +8,12 @@ class FileReader(path: String) {
 
   val logger: Logger = Logger(getClass.getName)
 
+  /**
+   * Reads lines from the file represented by this FileStorageWriter instance.
+   *
+   * @param batch The number of lines to read from the file.
+   * @return A list of lines read from the file.
+   */
   def readFile(batch: Int): List[String] = {
     var lines: List[String] = List.empty[String]
 
@@ -34,6 +40,7 @@ class FileReader(path: String) {
   }
 }
 
+//companion object for the FileReader class with apply function.
 object FileReader{
   def apply(path: String): FileReader = new FileReader(path)
 }

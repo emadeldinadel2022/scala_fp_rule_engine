@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add tech stack to readme.md">
+    <list default="true" id="0e910013-c164-4520-8422-dfb85cdad441" name="Changes" comment="add project structure to readme.md">
+      <change afterPath="$PROJECT_DIR$/src/main/generation_data_source/Orders.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/configurations/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/localstorage/loading_zone/orders_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/localstorage/save_zone/orders_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logs/data_lineage.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/data_lineage.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logs/rule_engine.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/rule_engine.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/OrderProcessor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businesslogic/RefactorRuleEngine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/businessmodels/OrderModels.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/DBConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/DBConnector.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/QueryHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/QueryHandler.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/SlickTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/datarepository/TimeConvertor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/datarepository/TimeDateConvertor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileReader.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileStorageWriter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/filecommunication/FileWatcher.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/filecommunication/FileWatcher.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +101,7 @@
       <recent name="$PROJECT_DIR$/src/main/configurations" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.extractionlayer.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="scala_project" />
@@ -141,8 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.extractionlayer.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.extractionlayer.Main" />
         <item itemvalue="Application.RefactorRuleEngine" />
         <item itemvalue="Application.ordersrulesengine.OrderDiscountProcessing" />
         <item itemvalue="Application.OrderDiscountProcessing" />
@@ -241,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715261665225</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add project structure to readme.md">
+      <option name="closed" value="true" />
+      <created>1715263380213</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715263380213</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -254,7 +278,8 @@
     <MESSAGE value="update readme.md" />
     <MESSAGE value="update readme.md 2" />
     <MESSAGE value="add tech stack to readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tech stack to readme.md" />
+    <MESSAGE value="add project structure to readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add project structure to readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

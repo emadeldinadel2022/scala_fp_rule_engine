@@ -4,8 +4,12 @@ import slick.jdbc.PostgresProfile.api._
 
 object DBConnector {
   
-  val db = Database.forConfig("postgres")
+  /**
+   * 
+   * Represent the database connection object that get the configuration form the application.conf in src/main/resources dir
+   *
+   * */
   
-  def closeConnection(): Unit = db.close()
+  val db = Database.forConfig("postgres")
   
 }
